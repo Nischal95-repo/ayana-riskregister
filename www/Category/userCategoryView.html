@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <title>Ayana Renewable Power</title>
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="../images/favicon.ico"
+    />
+    <!-- css files -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"
+    />
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="../css/styles.css" />
+  </head>
+
+  <body>
+    <!-- Header section start -->
+    <header>
+      <div class="row align-items-center no-gutters">
+        <div class="col-6">
+          <a href="javascript:void(0)" class="menu-icon">
+            <svg width="18px" height="18px" viewBox="0 0 177 130">
+              <g
+                id="Page-1"
+                stroke="none"
+                stroke-width="1"
+                fill="none"
+                fill-rule="evenodd"
+              >
+                <g id="svg" fill-rule="nonzero" fill="#000000">
+                  <path
+                    d="M0,0 L0,10 L176.724,10 L176.724,0 L0,0 Z M0,69.92 L176.724,69.92 L176.724,59.92 L0,59.92 L0,69.92 Z M0,129.84 L107.724,129.84 L107.724,119.84 L0,119.84 L0,129.84 Z"
+                    id="Shape"
+                  ></path>
+                </g>
+              </g>
+            </svg>
+          </a>
+          <a href="#" class="brand-name">
+            <img src="http://www.ayanapower.com/frontend/images/logo.jpg" />
+          </a>
+        </div>
+        <div class="col-6 text-right">
+          <ul class="list-inline info-list">
+            <li class="list-inline-item username"><a href="#">Welcome !</a></li>
+            <li class="list-inline-item">
+              <a href="#">
+                <svg
+                  x="0px"
+                  y="0px"
+                  width="22px"
+                  height="22px"
+                  viewBox="0 0 16 16"
+                >
+                  <g transform="translate(0, 0)">
+                    <path
+                      data-color="color-2"
+                      d="M14.5,12.976a1,1,0,0,0-.426-.82A10.367,10.367,0,0,0,8,10.5a10.367,10.367,0,0,0-6.074,1.656,1,1,0,0,0-.426.82V15.5h13Z"
+                      fill="none"
+                      stroke="#69951a"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                    <circle
+                      cx="8"
+                      cy="4"
+                      r="3.5"
+                      fill="none"
+                      stroke="#69951a"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></circle>
+                  </g>
+                </svg>
+              </a>
+            </li>
+            <li class="list-inline-item notifications">
+              <a href="#">
+                <svg
+                  x="0px"
+                  y="0px"
+                  width="22px"
+                  height="22px"
+                  viewBox="0 0 16 16"
+                >
+                  <g transform="translate(0, 0)">
+                    <path
+                      data-color="color-2"
+                      fill="none"
+                      stroke="#69951a"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-miterlimit="10"
+                      d=" M10,13.5c0,1.105-0.895,2-2,2s-2-0.895-2-2"
+                    ></path>
+                    <line
+                      fill="none"
+                      stroke="#69951a"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-miterlimit="10"
+                      x1="0.5"
+                      y1="11.5"
+                      x2="15.5"
+                      y2="11.5"
+                    ></line>
+                    <path
+                      fill="none"
+                      stroke="#69951a"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-miterlimit="10"
+                      d="M14.5,11.5H15 c-1.105,0-2.5-0.895-2.5-2V5c0-2.485-2.015-4.5-4.5-4.5h0C5.515,0.5,3.5,2.515,3.5,5v4.5c0,1.105-0.895,2-2,2"
+                    ></path>
+                  </g>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <section class="nav-section" style="overflow-y: auto;overflow-x: hidden">
+      <ul class="list-unstyled">
+        <li>
+          <a href="categoryList.html">
+            <figure>
+              <img src="../images/category.svg" />
+            </figure>
+            <span>Category Mgmt.</span>
+          </a>
+        </li>
+        <li>
+          <a href="../GridData/gird/grid_gridlist.html">
+            <figure>
+              <img src="../images/grid.svg" />
+            </figure>
+            <span>Grid Mgmt.</span>
+          </a>
+        </li>
+        <li>
+          <a href="../Documents-info/documentsList.html">
+            <figure>
+              <svg
+                x="0px"
+                y="0px"
+                width="18px"
+                height="18px"
+                viewBox="0 0 16 16"
+              >
+                <g transform="translate(0, 0)">
+                  <line
+                    fill="none"
+                    stroke="#69951a"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-miterlimit="10"
+                    x1="4.5"
+                    y1="11.5"
+                    x2="11.5"
+                    y2="11.5"
+                    data-color="color-2"
+                  ></line>
+                  <line
+                    fill="none"
+                    stroke="#69951a"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-miterlimit="10"
+                    x1="4.5"
+                    y1="8.5"
+                    x2="11.5"
+                    y2="8.5"
+                    data-color="color-2"
+                  ></line>
+                  <line
+                    fill="none"
+                    stroke="#69951a"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-miterlimit="10"
+                    x1="4.5"
+                    y1="5.5"
+                    x2="6.5"
+                    y2="5.5"
+                    data-color="color-2"
+                  ></line>
+                  <polygon
+                    fill="none"
+                    stroke="#69951a"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-miterlimit="10"
+                    points="9.5,0.5 1.5,0.5 1.5,15.5 14.5,15.5 14.5,5.5 "
+                  ></polygon>
+                  <polyline
+                    fill="none"
+                    stroke="#69951a"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-miterlimit="10"
+                    points="9.5,0.5 9.5,5.5 14.5,5.5 "
+                  ></polyline>
+                </g>
+              </svg>
+            </figure>
+            <span>Doc Upload</span>
+          </a>
+        </li>
+        <li>
+          <a href="../GridData/gird/grid_gridColoumInput.html">
+            <figure>
+              <img src="../images/gridColInput.svg" />
+            </figure>
+
+            <span>Grid Input </span>
+          </a>
+        </li>
+        <li>
+          <a href="userCategoryView.html">
+            <figure>
+              <img src="../images/category.svg" />
+            </figure>
+            <span>Info View</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="../index.html">
+            <figure>
+              <svg
+                x="0px"
+                y="0px"
+                width="18px"
+                height="18px"
+                viewBox="0 0 16 16"
+                style="transform: rotate(90deg);"
+              >
+                <g transform="translate(0, 0)">
+                  <polygon
+                    fill="none"
+                    stroke="#69951a"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-miterlimit="10"
+                    points="12.5,5.5 8,0.5 3.5,5.5 6.5,5.5 6.5,11.5 9.5,11.5 9.5,5.5 "
+                    data-color="color-2"
+                  ></polygon>
+                  <path
+                    fill="none"
+                    stroke="#69951a"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M15.5,10.5v4c0,0.552-0.448,1-1,1h-13 c-0.552,0-1-0.448-1-1v-4"
+                  ></path>
+                </g>
+              </svg>
+            </figure>
+            <span>Logout</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <section class="main-section">
+      <!-- Breadcrumb Section Start -->
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="#">Home</a>
+          </li>
+          <li class="breadcrumb-item active">
+            Category List
+          </li>
+        </ol>
+      </nav>
+      <!-- Breadcrumb Section End -->
+      <div class="row align-items-center no-gutters">
+        <div class="col-md-8">
+          <h1 class="heading m-b-0">Category List</h1>
+        </div>
+        <div class="col-md-4 text-right">
+          <!-- <a href="addCategory.html" class="btn btn-danger">Add</a
+          > -->
+          <button class="btn btn-primary filter-btn  m-l-10">Filter</button>
+
+          <div class="filter-popup">
+            <form>
+              <div class="form-group">
+                <label>Category Id</label><br />
+                <input
+                  type="textbox"
+                  class="form-control "
+                  placeholder="Enter Category Id"
+                />
+              </div>
+              <div class="form-group">
+                <label>Category Name</label><br />
+                <input
+                  type="textbox"
+                  class="form-control "
+                  placeholder="Enter Category Name"
+                />
+              </div>
+              <div class="form-group">
+                <label>Status</label>
+                <select class="form-control select-style-1">
+                  <option>Active</option>
+                  <option>In Active</option>
+                </select>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 text-center">
+                  <button type="button" class="btn btn-light btn-block">
+                    Clear
+                  </button>
+                </div>
+                <div class="col-md-6 text-center">
+                  <button type="button" class="btn btn-danger">Apply</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="table-responsive">
+          <table class="table table-style-1 m-t-35">
+            <thead>
+              <tr>
+                <th scope="col">CATEGORY ID</th>
+                <th scope="col">NAME</th>
+                <!-- <th scope="col">DESCRIPTION</!-->
+
+                <th scope="col">STATUS</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr onclick="window.location='categoryView.html';">
+                <td>1</td>
+                <td>Regulatory Info / Policies</td>
+
+                <td>Active</td>
+                <td>
+                  <a href="categoryView.html" class="link-primary">
+                    <svg
+                      x="0px"
+                      y="0px"
+                      width="16px"
+                      height="16px"
+                      viewBox="0 0 16 16"
+                    >
+                      <g transform="translate(0, 0)">
+                        <line
+                          fill="none"
+                          stroke="#69951a"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-miterlimit="10"
+                          x1="4.5"
+                          y1="11.5"
+                          x2="11.5"
+                          y2="11.5"
+                          data-color="color-2"
+                        ></line>
+                        <line
+                          fill="none"
+                          stroke="#69951a"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-miterlimit="10"
+                          x1="4.5"
+                          y1="8.5"
+                          x2="11.5"
+                          y2="8.5"
+                          data-color="color-2"
+                        ></line>
+                        <line
+                          fill="none"
+                          stroke="#69951a"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-miterlimit="10"
+                          x1="4.5"
+                          y1="5.5"
+                          x2="6.5"
+                          y2="5.5"
+                          data-color="color-2"
+                        ></line>
+                        <polygon
+                          fill="none"
+                          stroke="#69951a"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-miterlimit="10"
+                          points="9.5,0.5 1.5,0.5 1.5,15.5 14.5,15.5 14.5,5.5 "
+                        ></polygon>
+                        <polyline
+                          fill="none"
+                          stroke="#69951a"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-miterlimit="10"
+                          points="9.5,0.5 9.5,5.5 14.5,5.5 "
+                        ></polyline>
+                      </g>
+                    </svg>
+                  </a>
+                </td>
+              </tr>
+              <tr onclick="window.location='categoryView.html';">
+                <td>2</td>
+                <td>Solar Projects DB</td>
+
+                <td>Pending For Activation</td>
+                <td>
+                  <a href="categoryView.html" class="link-primary">
+                    <svg
+                      x="0px"
+                      y="0px"
+                      width="16px"
+                      height="16px"
+                      viewBox="0 0 16 16"
+                    >
+                      <g transform="translate(0, 0)">
+                        <line
+                          fill="none"
+                          stroke="#69951a"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-miterlimit="10"
+                          x1="4.5"
+                          y1="11.5"
+                          x2="11.5"
+                          y2="11.5"
+                          data-color="color-2"
+                        ></line>
+                        <line
+                          fill="none"
+                          stroke="#69951a"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-miterlimit="10"
+                          x1="4.5"
+                          y1="8.5"
+                          x2="11.5"
+                          y2="8.5"
+                          data-color="color-2"
+                        ></line>
+                        <line
+                          fill="none"
+                          stroke="#69951a"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-miterlimit="10"
+                          x1="4.5"
+                          y1="5.5"
+                          x2="6.5"
+                          y2="5.5"
+                          data-color="color-2"
+                        ></line>
+                        <polygon
+                          fill="none"
+                          stroke="#69951a"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-miterlimit="10"
+                          points="9.5,0.5 1.5,0.5 1.5,15.5 14.5,15.5 14.5,5.5 "
+                        ></polygon>
+                        <polyline
+                          fill="none"
+                          stroke="#69951a"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-miterlimit="10"
+                          points="9.5,0.5 9.5,5.5 14.5,5.5 "
+                        ></polyline>
+                      </g>
+                    </svg>
+                  </a>
+                </td>
+              </tr>
+              <tr onclick="window.location='categoryView.html';">
+                <td>3</td>
+                <td>Wind Projects</td>
+
+                <td>Active</td>
+                <td>
+                  <a href="categoryView.html" class="link-primary">
+                    <svg
+                      x="0px"
+                      y="0px"
+                      width="16px"
+                      height="16px"
+                      viewBox="0 0 16 16"
+                    >
+                      <g transform="translate(0, 0)">
+                        <line
+                          fill="none"
+                          stroke="#69951a"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-miterlimit="10"
+                          x1="4.5"
+                          y1="11.5"
+                          x2="11.5"
+                          y2="11.5"
+                          data-color="color-2"
+                        ></line>
+                        <line
+                          fill="none"
+                          stroke="#69951a"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-miterlimit="10"
+                          x1="4.5"
+                          y1="8.5"
+                          x2="11.5"
+                          y2="8.5"
+                          data-color="color-2"
+                        ></line>
+                        <line
+                          fill="none"
+                          stroke="#69951a"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-miterlimit="10"
+                          x1="4.5"
+                          y1="5.5"
+                          x2="6.5"
+                          y2="5.5"
+                          data-color="color-2"
+                        ></line>
+                        <polygon
+                          fill="none"
+                          stroke="#69951a"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-miterlimit="10"
+                          points="9.5,0.5 1.5,0.5 1.5,15.5 14.5,15.5 14.5,5.5 "
+                        ></polygon>
+                        <polyline
+                          fill="none"
+                          stroke="#69951a"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-miterlimit="10"
+                          points="9.5,0.5 9.5,5.5 14.5,5.5 "
+                        ></polyline>
+                      </g>
+                    </svg>
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"
+    ></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script>
+      $(".menu-icon").click(function() {
+        $(".nav-section").toggleClass("expand");
+        $(".main-section").toggleClass("expand");
+      });
+
+      $(".notifications, .notifications-close").click(function() {
+        $(".notifications-section").toggleClass("expand");
+      });
+      $(".filter-btn").click(function() {
+        $(".filter-popup").slideToggle();
+      });
+      $(document).ready(function() {
+        var date_input = $(".date"); //our date input has the name "date"
+        var container =
+          $(".bootstrap-iso form").length > 0
+            ? $(".bootstrap-iso form").parent()
+            : "body";
+        date_input.datepicker({
+          format: "dd/mm/yyyy",
+          container: container,
+          todayHighlight: true,
+          autoclose: true
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <title>Ayana Renewable Power</title>
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="../images/favicon.ico"
+    />
+    <!-- css files -->
+    <link rel="stylesheet" href="../css/jquery-ui.css" />
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../css/styles.css" />
+    <style type="text/css">
+      #page {
+        color: black;
+      }
+      #page:hover {
+        color: red;
+      }
+      .more:hover {
+        background-color: white !important;
+      }
+
+      /* width */
+      ::-webkit-scrollbar {
+        width: 12px;
+      }
+
+      /* Track */
+      ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey;
+        border-radius: 10px;
+      }
+
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: #69951a;
+        border-radius: 10px;
+      }
+
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: #69951a;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header section start -->
+    <header>
+      <div class="row align-items-center no-gutters">
+        <div class="col-6">
+          <a href="javascript:void(0)" class="menu-icon">
+            <svg width="18px" height="18px" viewBox="0 0 177 130">
+              <g
+                id="Page-1"
+                stroke="none"
+                stroke-width="1"
+                fill="none"
+                fill-rule="evenodd"
+              >
+                <g id="svg" fill-rule="nonzero" fill="#000000">
+                  <path
+                    d="M0,0 L0,10 L176.724,10 L176.724,0 L0,0 Z M0,69.92 L176.724,69.92 L176.724,59.92 L0,59.92 L0,69.92 Z M0,129.84 L107.724,129.84 L107.724,119.84 L0,119.84 L0,129.84 Z"
+                    id="Shape"
+                  ></path>
+                </g>
+              </g>
+            </svg>
+          </a>
+          <a href="#" class="brand-name">
+            <img src="../images/logo.jpg" />
+          </a>
+        </div>
+        <div class="col-6 text-right">
+          <ul class="list-inline info-list">
+            <li class="list-inline-item username">
+              <a href="#">Welcome !</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                <svg
+                  x="0px"
+                  y="0px"
+                  width="22px"
+                  height="22px"
+                  viewBox="0 0 16 16"
+                >
+                  <g transform="translate(0, 0)">
+                    <path
+                      data-color="color-2"
+                      d="M14.5,12.976a1,1,0,0,0-.426-.82A10.367,10.367,0,0,0,8,10.5a10.367,10.367,0,0,0-6.074,1.656,1,1,0,0,0-.426.82V15.5h13Z"
+                      fill="none"
+                      stroke="#69951a"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                    <circle
+                      cx="8"
+                      cy="4"
+                      r="3.5"
+                      fill="none"
+                      stroke="#69951a"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></circle>
+                  </g>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <!-- Header section end -->
+
+    <!-- Navigation Section start -->
+    <section class="nav-section" style="overflow-y: auto;overflow-x: hidden">
+      <ul class="list-unstyled">
+        <li>
+          <a href="riskRegisterList.html">
+            <figure>
+              <img src="../images/category.svg" />
+            </figure>
+            <span>Risk Register</span>
+          </a>
+        </li>
+        <li>
+          <a href="reports.html">
+            <figure>
+              <img src="../images/view.svg" />
+            </figure>
+            <span>Reports</span>
+          </a>
+        </li>
+        <li>
+          <a href="../index.html">
+            <figure>
+              <svg
+                x="0px"
+                y="0px"
+                width="18px"
+                height="18px"
+                viewBox="0 0 16 16"
+                style="transform: rotate(90deg);"
+              >
+                <g transform="translate(0, 0)">
+                  <polygon
+                    fill="none"
+                    stroke="#69951a"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-miterlimit="10"
+                    points="12.5,5.5 8,0.5 3.5,5.5 6.5,5.5 6.5,11.5 9.5,11.5 9.5,5.5 "
+                    data-color="color-2"
+                  ></polygon>
+                  <path
+                    fill="none"
+                    stroke="#69951a"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M15.5,10.5v4c0,0.552-0.448,1-1,1h-13 c-0.552,0-1-0.448-1-1v-4"
+                  ></path>
+                </g>
+              </svg>
+            </figure>
+            <span>Logout</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <!-- Navigation Section End -->
+
+    <!-- Main Section start -->
+    <section class="main-section">
+      <!-- Breadcrumb Section Start -->
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="../home.html">Home</a></li>
+          <li class="breadcrumb-item">
+            <a href="riskRegisterList.html">Risk Register</a>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">
+            Add Risk
+          </li>
+        </ol>
+      </nav>
+      <!-- Breadcrumb Section End -->
+      <h1 class="heading m-b-25">Risk Details</h1>
+      <div class="row">
+        <div class="col-md-12">
+          <!-- Form Section start -->
+          <div class="box-card">
+            <div class="row">
+              <div class="col-md-4 col-lg-3">
+                <div class="form-group">
+                  <label>Risk </label>
+                  <input
+                    type="text"
+                    class="form-control-plaintext"
+                    value="Tariff Adoption"
+                  />
+                </div>
+              </div>
+              <div class="col-md-3 col-lg-3">
+                <div class="form-group">
+                  <label>Risk Category</label>
+                  <input
+                    type="text"
+                    class="form-control-plaintext"
+                    value="Permits & Approval"
+                  />
+                </div>
+              </div>
+              <div class="col-md-3 col-lg-3">
+                <div class="form-group">
+                  <label>Company</label>
+
+                  <input
+                    type="text"
+                    class="form-control-plaintext"
+                    value="Ayana Ananthapurama Pvt Ltd"
+                  />
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group">
+                  <label>Project</label>
+
+                  <input
+                    type="text"
+                    class="form-control-plaintext"
+                    value="NTPC"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 col-lg-3">
+                <div class="form-group">
+                  <label>Impact</label>
+                  <input
+                    type="text"
+                    class="form-control-plaintext"
+                    value="low"
+                  />
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <div class="form-group">
+                  <label>Probability</label>
+                  <input
+                    type="text"
+                    class="form-control-plaintext"
+                    value="medium"
+                  />
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <div class="form-group">
+                  <label>Severity</label>
+                  <input
+                    type="text"
+                    class="form-control-plaintext"
+                    value="low"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4 col-lg-6">
+                <div class="form-group">
+                  <label>Description</label>
+
+                  <div>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when ...
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-6 ">
+                <div class="form-group" style="margin-bottom: 0px;">
+                  <label>Attachments</label>
+
+                  <ol class="attachment-list">
+                    <li>file1.pdf <img src="../images/close.svg" /></li>
+                    <li>file2.pdf<img src="../images/close.svg" /></li>
+                    <li>file3.pdf <img src="../images/close.svg" /></li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="box-card">
+            <div class="row">
+              <div class="col-md-4 col-lg-3">
+                <div class="form-group">
+                  <label>Mitigation Plan </label>
+                  <input
+                    type="text"
+                    class="form-control-plaintext"
+                    value="Work with NTPC"
+                  />
+                </div>
+              </div>
+              <div class="col-md-3 col-lg-3">
+                <div class="form-group">
+                  <label>Responsible</label>
+                  <input
+                    type="text"
+                    class="form-control-plaintext"
+                    value="Rajesh"
+                  />
+                </div>
+              </div>
+              <div class="col-md-3 col-lg-3">
+                <div class="form-group">
+                  <label>Completion Date</label>
+
+                  <input
+                    type="text"
+                    class="form-control-plaintext"
+                    value="20-04-2020"
+                  />
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group">
+                  <label>Created By</label>
+
+                  <input
+                    type="text"
+                    class="form-control-plaintext"
+                    value="Ram"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-lg-4">
+                    <div class="form-group">
+                        <label>Comments</label>
+                        <textarea class="form-control" id="" cols="30" rows="10" placeholder="Enter comments"></textarea>
+                    </div>
+                </div>
+            </div>
+                <div class="row">
+                    <div class="col-md-12 col-lg-8">
+                      <button
+                        type="button"
+                        class="btn btn-danger"
+                        
+                      >
+                        Approve
+                      </ul>
+                      <button type="button" class="btn btn-clear m-l-50">
+                        Reassign
+                      </button>
+      
+
+                    </div>
+                  </div>
+            
+          </div>
+          <!-- Form Section End -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Section End -->
+
+    <!-- Script files -->
+    <!-- <script src="../js/jquery-3.3.1.min.js"></script> -->
+    <!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
+    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script> -->
+    <!-- <script src="../js/bootstrap.min.js"></script> -->
+    <script src="../js/popper.min.js"></script>
+
+    <script>
+      function myFunction() {
+        location.replace("riskDetails.html");
+      }
+    </script>
+    <script>
+      $("select").selectpicker();
+      $(".menu-icon").click(function() {
+        $(".nav-section").toggleClass("expand");
+        $(".main-section").toggleClass("expand");
+      });
+
+      $(".notifications, .notifications-close").click(function() {
+        $(".notifications-section").toggleClass("expand");
+      });
+
+      $(document).ready(function() {
+        var date_input = $(".date"); //our date input has the name "date"
+        var container =
+          $(".bootstrap-iso form").length > 0
+            ? $(".bootstrap-iso form").parent()
+            : "body";
+        date_input.datepicker({
+          format: "dd/mm/yyyy",
+          container: container,
+          todayHighlight: true,
+          autoclose: true
+        });
+      });
+    </script>
+  </body>
+</html>
