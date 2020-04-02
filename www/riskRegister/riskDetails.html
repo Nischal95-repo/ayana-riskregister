@@ -137,6 +137,14 @@
     <section class="nav-section" style="overflow-y: auto;overflow-x: hidden">
       <ul class="list-unstyled">
         <li>
+          <a href="dashboard.html">
+            <figure>
+              <img src="../images/dashboard.svg" />
+            </figure>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <li>
           <a href="riskRegisterList.html">
             <figure>
               <img src="../images/category.svg" />
@@ -289,7 +297,9 @@
             <div class="row">
               <div class="col-md-6 col-lg-6">
                 <div class="form-group">
-                  <label>Impact/Description<span style="color:red">*</span></label>
+                  <label
+                    >Impact/Description<span style="color:red">*</span></label
+                  >
                   <!-- <input
                     type="text"
                     class="form-control"
@@ -409,21 +419,23 @@
                       <th>Responsible</th>
                       <th>Due/Completion Date</th>
                       <th>Forecast Date</th>
-                      
+
                       <th>Status</th>
                       <th>Action(s)</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td> <a
-                        class="link-click ml-2"
-                        data-placement="bottom"
-                        title="view"
-                        onclick="displayView()"
-                      >
-                        1
-                      </a></td>
+                      <td>
+                        <a
+                          class="link-click ml-2"
+                          data-placement="bottom"
+                          title="view"
+                          onclick="displayView()"
+                        >
+                          1
+                        </a>
+                      </td>
                       <td>Work with NTPC</td>
                       <td>Finance</td>
                       <td>Rakesh</td>
@@ -459,14 +471,16 @@
                       </td>
                     </tr>
                     <tr>
-                      <td> <a
-                        class="link-click ml-2"
-                        data-placement="bottom"
-                        title="view"
-                        onclick="displayView()"
-                      >
-                        2
-                      </a></td>
+                      <td>
+                        <a
+                          class="link-click ml-2"
+                          data-placement="bottom"
+                          title="view"
+                          onclick="displayView()"
+                        >
+                          2
+                        </a>
+                      </td>
                       <td>Close follow up with procurement</td>
                       <td>Finance</td>
                       <td>Raj</td>
@@ -556,7 +570,9 @@
                 <div class="col-md-3 col-lg-3">
                   <div class="form-group">
                     <label
-                      >Due/Completion Date<span style="color:red">*</span></label
+                      >Due/Completion Date<span style="color:red"
+                        >*</span
+                      ></label
                     >
                     <input class="form-control" type="date" />
                   </div>
@@ -684,7 +700,7 @@
                     />
                   </div>
                 </div>
-                
+
                 <div class="col-md-6 col-lg-6 ">
                   <div class="form-group">
                     <label class="mt-2">Attachment List</label>
@@ -836,7 +852,11 @@
               </div>
               <div class="col-md-3">
                 <label></label>
-                <button type="button" class="btn btn-danger" style="margin-top:30px">
+                <button
+                  type="button"
+                  class="btn btn-danger"
+                  style="margin-top:30px"
+                >
                   Reassign
                 </button>
               </div>
@@ -895,6 +915,74 @@
                 Cancel
               </button>
               <button type="button" class="btn btn-danger popup-button-danger">
+                Done
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade popup-style-1"
+      id="reassignMitigation"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-body" style="padding-top: 0">
+            <div style="display:flex">
+              <figure>
+                <img src="../images/popup-logo.png" />
+              </figure>
+              <h1 class="heading m-l-45 m-b-35">Mitigation Plan Reassign</h1>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Comments<span style="color:red">*</span></label>
+                  <textarea class="form-control" cols="30" rows="10"></textarea>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group">
+                  <label>Department <span style="color:red">*</span></label>
+                  <select class="form-control select-style-1">
+                    <option>Select</option>
+                    <option> Finance</option>
+                    <option> IT</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group">
+                  <label>Responsible <span style="color:red">*</span></label>
+                  <select class="form-control select-style-1">
+                    <option>Select</option>
+                    <option> Ravi</option>
+                    <option>Kumar</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-default popup-button-default text-w-light"
+                data-dismiss="modal"
+              >
+                Cancel
+              </button>
+              <button
+                type="button"
+                class="btn btn-danger popup-button-danger"
+                data-dismiss="modal"
+              >
                 Done
               </button>
             </div>

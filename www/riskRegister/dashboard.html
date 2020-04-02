@@ -60,7 +60,7 @@
     </style>
   </head>
 
-  <body>
+  <body style="background-color: #f3f3f3;">
     <!-- Header section start -->
     <header>
       <div class="row align-items-center no-gutters">
@@ -189,91 +189,81 @@
       </ul>
     </section>
     <section class="main-section">
-      <!-- Breadcrumb Section Start -->
-      <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item">
-            <a href="../home.html">Home</a>
-          </li>
-          <li class="breadcrumb-item ">
-            Reports
-          </li>
-          <li class="breadcrumb-item active">
-            Risk Profile
-          </li>
-        </ol>
-      </nav>
-      <!-- Breadcrumb Section End -->
-      <div class="row align-items-center no-gutters">
-        <div class="col-md-8">
-          <h1 class="heading m-b-0">Risk Profile</h1>
-        </div>
-
-        <!-- style="width: 100%;    box-shadow: 0 0 2px rgba(0,0,0, .65);
-        padding: 15px;
-        border-radius: 3px;" -->
-        <div class="col-md-12 mt-3">
-          <div class="box-card">
-            <div class="row">
-              <div class="col-md-3">
-                <div class="form-group">
-                  <select class="login-input select-style-1">
-                    <option>Select Company</option>
-                    <option>Ayana Ananthapurama Pvt Ltd</option>
-                    <option>Ayana Renewable Power Pvt Ltd</option>
-
-                    <option>Ayana Renewable Power One Pvt Ltd</option>
-                    <option>Ayana Renewable Power Two Pvt Ltd</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="form-group">
-                  <select class="login-input select-style-1">
-                    <option>Select Project</option>
-                    <option>NTPC</option>
-                    <option>MRV</option>
-
-                    <option>SECI Kadapa</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-            <div class="row mt-3">
-              <div class="col-md-8">
-                <button type="button" class="btn btn-danger">Apply</button>
-                <button type="button" class="btn btn-light  ml-3">
-                  Clear
-                </button>
-                <button type="button" class="btn btn-light  ml-3">
-                  Download
-                </button>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="widget red-gradient">
+            <div class="row  align-items-center">
+              <div class="col">
+                <div class="counter-label">Total</div>
+                <div class="counter-no">20</div>
               </div>
             </div>
           </div>
-
-          <div class="box-card">
-            <div class="col-md-8">
-              <h1 class="heading m-b-0">Risk Distribution</h1>
-            </div>
-            <div class="row">
-              <div class="col-md-6">
-                <img
-                  src="../images/matrix.png"
-                  style="height:240px;    margin: 35px 0px 0px 75px"
-                />
-              </div>
-              <div class="col-md-6">
-                <!-- <div class="row">
-                    <h1 class="heading m-b-0">Risk Distribution</h1>
-                  </div>  -->
-                <div class="row"><div id="piechart"></div></div>
+        </div>
+        <div class="col-md-3">
+          <div class="widget cracyn-gradient">
+            <div class="row  align-items-center">
+              <div class="col">
+                <div class="counter-label">Closed</div>
+                <div class="counter-no">10</div>
               </div>
             </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="widget black-gradient">
+            <div class="row  align-items-center">
+              <div class="col">
+                <div class="counter-label">Pending</div>
+                <div class="counter-no">5</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="widget purple-gradient">
+            <div class="row  align-items-center">
+              <div class="col">
+                <div class="counter-label">Deviated</div>
+                <div class="counter-no">5</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3"></div>
+        <div class="col-md-3"></div>
+        <div class="col-md-3"></div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-lg-6">
+          <div class="inner-box" style="min-height: 300px;">
+            <h4>Risk By Category</h4>
+            <div id="piechart1"></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-6">
+          <div class="inner-box">
+            <h4>Risk By Company</h4>
+            <div id="piechart2"></div>
           </div>
         </div>
       </div>
-      <!-- </div> -->
+      <div class="row">
+        <div class="col-md-6 col-lg-6">
+          <div class="inner-box" style="min-height: 300px;">
+            <h4>Risk By Project</h4>
+            <div id="piechart3"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 col-lg-12">
+          <div class="inner-box" style="min-height: 300px;">
+            <h4>Risk By Department</h4>
+            <div id="barChart"></div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <script src="../js/jquery-3.3.1.min.js"></script>
@@ -335,14 +325,138 @@
         var options = {
           title: "Risk Distribution",
           titlePosition: "none",
-          width: 555,
+          width: 580,
           height: 300,
-          legend: { alignment: "center" }
+          legend: { alignment: "center" },
+          backgroundColor: { fill: "#f7fafc" }
+          //   chartArea: {
+          //     width: 450,
+          //     left: 50
+          //   }
         };
 
         // Display the chart inside the <div> element with id="piechart"
         var chart = new google.visualization.PieChart(
-          document.getElementById("piechart")
+          document.getElementById("piechart1")
+        );
+        chart.draw(data, options);
+      }
+    </script>
+
+    <script type="text/javascript">
+      // Load google charts
+      google.charts.load("current", { packages: ["corechart"] });
+      google.charts.setOnLoadCallback(drawCompanyChart);
+
+      // Draw the chart and set the chart values
+      function drawCompanyChart() {
+        var data = google.visualization.arrayToDataTable([
+          ["Task", "Hours per Day"],
+          ["Ayana Renewable Power Pvt Ltd", 8],
+          ["Ayana Renewable Power One Pvt Ltd", 2],
+          ["Ayana Renewable Power Two Pvt Ltd", 4],
+          ["Ayana Renewable Power Three Pvt Ltd", 2],
+          ["Ayana Ananthapuramu Solar Pvt Ltd", 8],
+          ["Ayana Kadapa Renewable Power Pvt Ltd", 8]
+        ]);
+
+        // Optional; add a title and set the width and height of the chart
+        var options = {
+          titlePosition: "none",
+          width: 580,
+          height: 300,
+          legend: { alignment: "center" },
+          backgroundColor: { fill: "#f7fafc" },
+          chartArea: {
+            width: 450,
+            left: 100
+          }
+        };
+
+        // Display the chart inside the <div> element with id="piechart"
+        var chart = new google.visualization.PieChart(
+          document.getElementById("piechart2")
+        );
+        chart.draw(data, options);
+      }
+    </script>
+    <script type="text/javascript">
+      // Load google charts
+      google.charts.load("current", { packages: ["corechart"] });
+      google.charts.setOnLoadCallback(drawCompanyChart);
+
+      // Draw the chart and set the chart values
+      function drawCompanyChart() {
+        var data = google.visualization.arrayToDataTable([
+          ["Task", "Hours per Day"],
+          ["NTPC", 8],
+          ["MRV", 2],
+          ["ISTS", 4],
+          ["SECI Kadapa", 2]
+        ]);
+
+        // Optional; add a title and set the width and height of the chart
+        var options = {
+          titlePosition: "none",
+          width: 580,
+          height: 300,
+          legend: { alignment: "center" },
+          backgroundColor: { fill: "#f7fafc" }
+          //   chartArea: {
+          //     right: 130, // set this to adjust the legend width
+          //     left: 60 // set this eventually, to adjust the left margin
+          //   }
+        };
+
+        // Display the chart inside the <div> element with id="piechart"
+        var chart = new google.visualization.PieChart(
+          document.getElementById("piechart3")
+        );
+        chart.draw(data, options);
+      }
+    </script>
+    <script type="text/javascript">
+      // Load google charts
+      google.charts.load("current", { packages: ["corechart", "bar"] });
+      google.charts.setOnLoadCallback(drawDepartmentChart);
+
+      // Draw the chart and set the chart values
+      function drawDepartmentChart() {
+        var data = google.visualization.arrayToDataTable([
+          ["", "", { role: "style" }],
+          ["Engineering", 5, "color:#5AA454"],
+          ["BD", 2, "color:#A10A28"],
+          ["IT", 4, "#color:C7B42C"],
+          ["Finance", 2, "#color:AAAAAA"],
+          ["Projects", 7, "#color:17a2b8"],
+          ["Land", 6, "color:#f3ad06"],
+          ["HR & Admin", 2, "color:#343a40"],
+          ["Procurement", 3, "color:#6c757d"],
+          ["Legal", 1, "color:#69961b"]
+        ]);
+
+        // Optional; add a title and set the width and height of the chart
+        var options = {
+          titlePosition: "none",
+          width: 1500,
+          height: 400,
+          bar: { groupWidth: "95%" },
+          legend: { position: "bottom" },
+          backgroundColor: { fill: "#f7fafc" },
+          bar: {
+            groupWidth: "80%"
+          },
+          hAxis: {
+            title: "Departments"
+          },
+          vAxis: {
+            title: "Risk"
+          }
+        };
+
+        // Display the chart inside the <div> element with id="piechart"
+        var chart = new google.visualization.ColumnChart(
+          document.getElementById("barChart")
         );
         chart.draw(data, options);
       }
