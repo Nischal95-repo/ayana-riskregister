@@ -1564,10 +1564,18 @@ ul,
   background-color: #155724;
 }
 
+/* Risk Register */
+
 .attachment-list li {
   float: left;
   margin: 10px 0 0 50px;
 }
 .attachment-list li:first-child {
   margin-left: 0px;
+}
+
+.mitigation-list {
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 100px;
 }

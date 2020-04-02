@@ -231,20 +231,26 @@
                   />
                 </div>
               </div>
-
-              <div class="col-md-4 col-lg-6">
+              <div class="col-md-3 col-lg-3">
                 <div class="form-group">
-                  <label>Description<span style="color:red">*</span></label>
-                  <!-- <input
+                  <label>Company</label>
+
+                  <input
                     type="text"
-                    class="form-control"
-                    placeholder="Enter Description"
-                  /> -->
-                  <div>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s
-                  </div>
+                    class="form-control-plaintext"
+                    value="Ayana Ananthapurama Pvt Ltd"
+                  />
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group">
+                  <label>Project</label>
+
+                  <input
+                    type="text"
+                    class="form-control-plaintext"
+                    value="NTPC"
+                  />
                 </div>
               </div>
             </div>
@@ -281,7 +287,22 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-md-12 col-lg-12">
+              <div class="col-md-6 col-lg-6">
+                <div class="form-group">
+                  <label>Description<span style="color:red">*</span></label>
+                  <!-- <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Enter Description"
+                  /> -->
+                  <div>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-6">
                 <div class="form-group">
                   <label>Attachments <span style="color:red">*</span></label>
                   <ol class="attachment-list">
@@ -289,6 +310,52 @@
                     <li>file2.pdf<img src="../images/close.svg" /></li>
                     <li>file3.pdf <img src="../images/close.svg" /></li>
                   </ol>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 col-lg-3">
+                <div class="form-group">
+                  <label>Created By</label>
+                  <input
+                    type="text"
+                    readonly
+                    class="form-control-plaintext "
+                    value="suprith@gmail.com"
+                  />
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <div class="form-group">
+                  <label>Created On</label>
+                  <input
+                    type="text"
+                    readonly
+                    class="form-control-plaintext "
+                    value="09-02-2019 11:12"
+                  />
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <div class="form-group">
+                  <label>Last Modified By</label>
+                  <input
+                    type="text"
+                    readonly
+                    class="form-control-plaintext "
+                    value="suprith@gmail.com"
+                  />
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <div class="form-group">
+                  <label>Last Modified On</label>
+                  <input
+                    type="text"
+                    readonly
+                    class="form-control-plaintext "
+                    value="12-02-2019  20:12"
+                  />
                 </div>
               </div>
             </div>
@@ -359,12 +426,28 @@
                         <a
                           class="link-click"
                           data-placement="bottom"
-                          title="View"
+                          title="update"
                           data-toggle="modal"
                           data-target="#updateMitigation"
                         >
+                          <img src="../images/Modify.svg" />
+                        </a>
+                        <a
+                          class="link-click ml-2"
+                          data-placement="bottom"
+                          title="view"
+                          onclick="displayView()"
+                        >
                           <img src="../images/view.svg" />
                         </a>
+                        <!-- <a
+                        class="link-click ml-2"
+                        data-placement="bottom"
+                        title="view"
+                        
+                      >
+                        <img src="../images/exchange.svg" />
+                      </a> -->
                       </td>
                     </tr>
                     <tr>
@@ -379,8 +462,16 @@
                         <a
                           class="link-click"
                           data-placement="bottom"
-                          title="View"
+                          title="Approve"
                           href="approve.html"
+                        >
+                          <img src="../images/thumbs-up-hand-symbol.svg" />
+                        </a>
+                        <a
+                          class="link-click ml-2"
+                          data-placement="bottom"
+                          title="view"
+                          onclick="displayView()"
                         >
                           <img src="../images/view.svg" />
                         </a>
@@ -492,6 +583,164 @@
                 </div>
               </div>
             </div>
+
+            <div id="mitigationView" style="display: none;">
+              <div class="row align-items-center">
+                <div class="col-md-10">
+                  <h1 class="heading m-b-0">Mitigation Plan</h1>
+                </div>
+                <div class="col-md-2">
+                  <div class="text-right">
+                    <a
+                      class="link-click"
+                      href="#"
+                      data-placement="bottom"
+                      title="Upload"
+                      style="font-size: 16px;"
+                      data-toggle="modal"
+                      onclick="displayView()"
+                    >
+                      <img src="../images/close.svg" />
+                      Close
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col-md-3 col-lg-3">
+                  <div class="form-group">
+                    <label>Description <span style="color:red">*</span></label>
+                    <div>Work with NTPC</div>
+                  </div>
+                </div>
+                <div class="col-md-3 col-lg-3">
+                  <div class="form-group">
+                    <label>Department<span style="color:red">*</span></label>
+                    <input
+                      type="text"
+                      class="form-control-plaintext"
+                      value="Finance"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-3 col-lg-3">
+                  <div class="form-group">
+                    <label>Responsible<span style="color:red">*</span></label>
+                    <input
+                      type="text"
+                      class="form-control-plaintext"
+                      value="Raj"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-3 col-lg-3">
+                  <div class="form-group">
+                    <label
+                      >Completion Date<span style="color:red">*</span></label
+                    >
+                    <input
+                      class="form-control-plaintext"
+                      type="text"
+                      value="20-04-2020"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-3 col-lg-3">
+                  <div class="form-group">
+                    <label>Approved By</label>
+                    <input
+                      type="text"
+                      readonly
+                      class="form-control-plaintext "
+                      value="ram@gmail.com"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-3 col-lg-3">
+                  <div class="form-group">
+                    <label>Approved On</label>
+                    <input
+                      type="text"
+                      readonly
+                      class="form-control-plaintext "
+                      value="10-02-2019 11:12"
+                    />
+                  </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-6 ">
+                  <div class="form-group">
+                    <label class="mt-2">Attachment List</label>
+                    <div class="row attachment-list">
+                      <ol>
+                        <li>file1.pdf <img src="../images/close.svg" /></li>
+                        <li>file2.pdf<img src="../images/close.svg" /></li>
+                        <li>file3.pdf <img src="../images/close.svg" /></li>
+                      </ol>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-3 col-lg-3">
+                  <div class="form-group">
+                    <label>Created By</label>
+                    <input
+                      type="text"
+                      readonly
+                      class="form-control-plaintext "
+                      value="ram@gmail.com"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-3 col-lg-3">
+                  <div class="form-group">
+                    <label>Created On</label>
+                    <input
+                      type="text"
+                      readonly
+                      class="form-control-plaintext "
+                      value="10-02-2019 11:12"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-3 col-lg-3">
+                  <div class="form-group">
+                    <label>Last Modified By</label>
+                    <input
+                      type="text"
+                      readonly
+                      class="form-control-plaintext "
+                      value="ram@gmail.com"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-3 col-lg-3">
+                  <div class="form-group">
+                    <label>Last Modified On</label>
+                    <input
+                      type="text"
+                      readonly
+                      class="form-control-plaintext "
+                      value="11-02-2019  20:12"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col-md-12 col-lg-8">
+                  <button
+                    type="button"
+                    class="btn btn-danger"
+                    onclick="toggleList()"
+                  >
+                    Edit
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -547,6 +796,34 @@
                     <option> Waiting For Closure</option>
                   </select>
                 </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-3">
+                <div class="form-group">
+                  <label>Department</label>
+                  <select class="form-control select-style-1">
+                    <option>Select</option>
+                    <option> Finance</option>
+                    <option> IT</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group">
+                  <label>Responsible</label>
+                  <select class="form-control select-style-1">
+                    <option>Select</option>
+                    <option> Ravi</option>
+                    <option>Kumar</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <label></label>
+                <button type="button" class="btn btn-danger" style="margin-top:30px">
+                  Reassign
+                </button>
               </div>
             </div>
             <div class="row">
@@ -656,13 +933,33 @@
       function toggleList() {
         let x = document.getElementById("mitigationList");
         let y = document.getElementById("mitigationAdd");
+        let z = document.getElementById("mitigationView");
         console.log("list", x);
         if (x.style.display == "block") {
           x.style.display = "none";
           y.style.display = "block";
+          z.style.display = "none";
         } else {
           y.style.display = "none";
           x.style.display = "block";
+          z.style.display = "none";
+        }
+      }
+      function displayView() {
+        let x = document.getElementById("mitigationList");
+        let y = document.getElementById("mitigationAdd");
+        let z = document.getElementById("mitigationView");
+
+        if (z.style.display == "block") {
+          y.style.display = "none";
+          x.style.display = "block";
+
+          z.style.display = "none";
+        } else {
+          y.style.display = "none";
+          x.style.display = "none";
+
+          z.style.display = "block";
         }
       }
     </script>
