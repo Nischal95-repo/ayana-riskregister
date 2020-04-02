@@ -161,6 +161,14 @@
           </a>
         </li>
         <li>
+          <a href="riskProfile.html">
+            <figure>
+              <img src="../images/reports.svg" />
+            </figure>
+            <span>Risk Profile</span>
+          </a>
+        </li>
+        <li>
           <a href="../index.html">
             <figure>
               <svg
@@ -829,7 +837,7 @@
                 </div>
               </div>
             </div>
-            <div class="row">
+            <div class="row" id="reassign" style="display: none;">
               <div class="col-md-3">
                 <div class="form-group">
                   <label>Department</label>
@@ -850,16 +858,6 @@
                   </select>
                 </div>
               </div>
-              <div class="col-md-3">
-                <label></label>
-                <button
-                  type="button"
-                  class="btn btn-danger"
-                  style="margin-top:30px"
-                >
-                  Reassign
-                </button>
-              </div>
             </div>
             <div class="row">
               <div class="col-md-12 col-lg-8">
@@ -868,6 +866,13 @@
                 </button>
                 <button type="button" class="btn btn-clear m-l-50">
                   Clear
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-clear m-l-50"
+                  onclick="reassignToggle()"
+                >
+                  Reassign
                 </button>
               </div>
             </div>
@@ -1063,6 +1068,15 @@
           x.style.display = "none";
 
           z.style.display = "block";
+        }
+      }
+
+      function reassignToggle() {
+        let x = document.getElementById("reassign");
+        if (x.style.display == "flex") {
+          x.style.display = "none";
+        } else {
+          x.style.display = "flex";
         }
       }
     </script>

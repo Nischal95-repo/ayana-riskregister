@@ -151,6 +151,14 @@
             <span>Reports</span>
           </a>
         </li>
+        <li>
+          <a href="riskProfile.html">
+            <figure>
+              <img src="../images/reports.svg" />
+            </figure>
+            <span>Risk Profile</span>
+          </a>
+        </li>
 
         <li>
           <a href="../index.html">
@@ -191,7 +199,8 @@
     <section class="main-section">
       <div class="row">
         <div class="col-md-3">
-          <div class="widget red-gradient">
+          <!-- <div class="widget red-gradient"> -->
+          <div class="widget " style="background-color: #17a2b8;">
             <div class="row  align-items-center">
               <div class="col">
                 <div class="counter-label">Total</div>
@@ -201,7 +210,12 @@
           </div>
         </div>
         <div class="col-md-3">
-          <div class="widget cracyn-gradient">
+          <!-- <div class="widget cracyn-gradient"> -->
+          <div
+            class="widget "
+            style="background-color:             #6c757d
+            ;"
+          >
             <div class="row  align-items-center">
               <div class="col">
                 <div class="counter-label">Closed</div>
@@ -211,7 +225,8 @@
           </div>
         </div>
         <div class="col-md-3">
-          <div class="widget black-gradient">
+          <!-- <div class="widget black-gradient"> -->
+          <div class="widget " style="background-color: #f3ad06;">
             <div class="row  align-items-center">
               <div class="col">
                 <div class="counter-label">Pending</div>
@@ -221,7 +236,8 @@
           </div>
         </div>
         <div class="col-md-3">
-          <div class="widget purple-gradient">
+          <!-- <div class="widget purple-gradient"> -->
+          <div class="widget " style="background-color: #343a40;">
             <div class="row  align-items-center">
               <div class="col">
                 <div class="counter-label">Deviated</div>
@@ -249,12 +265,14 @@
         </div>
       </div>
       <div class="row">
+        <div class="col-md-3 col-lg-3"></div>
         <div class="col-md-6 col-lg-6">
           <div class="inner-box" style="min-height: 300px;">
             <h4>Risk By Project</h4>
             <div id="piechart3"></div>
           </div>
         </div>
+        <div class="col-md-3 col-lg-3"></div>
       </div>
       <div class="row">
         <div class="col-md-12 col-lg-12">
@@ -325,7 +343,7 @@
         var options = {
           title: "Risk Distribution",
           titlePosition: "none",
-          width: 580,
+          width: 550,
           height: 300,
           legend: { alignment: "center" },
           backgroundColor: { fill: "#f7fafc" }
@@ -363,14 +381,14 @@
         // Optional; add a title and set the width and height of the chart
         var options = {
           titlePosition: "none",
-          width: 580,
+          width: 550,
           height: 300,
           legend: { alignment: "center" },
-          backgroundColor: { fill: "#f7fafc" },
-          chartArea: {
-            width: 450,
-            left: 100
-          }
+          backgroundColor: { fill: "#f7fafc" }
+          // chartArea: {
+          //   width: 450,
+          //   left: 100
+          // }
         };
 
         // Display the chart inside the <div> element with id="piechart"
@@ -398,7 +416,7 @@
         // Optional; add a title and set the width and height of the chart
         var options = {
           titlePosition: "none",
-          width: 580,
+          width: 550,
           height: 300,
           legend: { alignment: "center" },
           backgroundColor: { fill: "#f7fafc" }
@@ -438,7 +456,7 @@
         // Optional; add a title and set the width and height of the chart
         var options = {
           titlePosition: "none",
-          width: 1500,
+          width: 1150,
           height: 400,
           bar: { groupWidth: "95%" },
           legend: { position: "bottom" },
@@ -451,6 +469,10 @@
           },
           vAxis: {
             title: "Risk"
+          },
+          chartArea: {
+            width: 1100,
+            left: 100
           }
         };
 

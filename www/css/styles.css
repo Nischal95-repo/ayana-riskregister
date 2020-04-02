@@ -1619,6 +1619,7 @@ ul,
   margin-bottom: 30px;
   height: 100px;
   text-align: center;
+  cursor: pointer;
 }
 .purple-gradient {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#923f8c+0,a765a3+100 */
