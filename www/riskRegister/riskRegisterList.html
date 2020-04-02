@@ -252,24 +252,6 @@
             <div class="row">
               <div class="col-md-3">
                 <div class="form-group">
-                  <input class="login-input" placeholder="Risk" style />
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="form-group">
-                  <select class="login-input select-style-1">
-                    <option>Select Risk Category</option>
-                    <option>Permit & Approval</option>
-                    <option>Procurement</option>
-
-                    <option>Construction</option>
-                    <option>General</option>
-                  </select>
-                </div>
-              </div>
-
-              <div class="col-md-3">
-                <div class="form-group">
                   <select class="login-input select-style-1">
                     <option>Select Company</option>
                     <option>Ayana Ananthapurama Pvt Ltd</option>
@@ -291,6 +273,23 @@
                   </select>
                 </div>
               </div>
+              <div class="col-md-3">
+                <div class="form-group">
+                  <select class="login-input select-style-1">
+                    <option>Select Risk Category</option>
+                    <option>Permit & Approval</option>
+                    <option>Procurement</option>
+
+                    <option>Construction</option>
+                    <option>General</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group">
+                  <input class="login-input" placeholder="Risk" style />
+                </div>
+              </div>
             </div>
             <div class="row">
               <div class="col-md-3">
@@ -302,23 +301,35 @@
                   </select>
                 </div>
               </div>
-              <!-- <div class="col-md-3">
-                <div class="form-group">
-                  <input
-                    class="login-input"
-                    placeholder="Mitigation Plan"
-                    style
-                  />
-                </div>
-              </div> -->
-
               <div class="col-md-3">
                 <div class="form-group">
-                  <input class="login-input" placeholder="Employee " style />
+                  <select class="login-input select-style-1">
+                    <option>Select Department</option>
+                    <option>Finance</option>
+                    <option>IT</option>
+                  </select>
                 </div>
               </div>
 
               <div class="col-md-3">
+                <div class="form-group">
+                  <select class="login-input select-style-1">
+                    <option>Select Assignee</option>
+                    <option>Raj</option>
+                    <option>Ram</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group">
+                  <select class="login-input select-style-1">
+                    <option>Custom Filter</option>
+                    <option>Select All</option>
+                    <option>Deviated</option>
+                  </select>
+                </div>
+              </div>
+              <!-- <div class="col-md-3">
                 <div class="form-group" style="display: flex;margin-top: 10px;">
                   <label>Deviated :</label>
                   <input
@@ -327,7 +338,7 @@
                     style="margin-left: 3px;height: 15px;width:15px"
                   />
                 </div>
-              </div>
+              </div> -->
             </div>
             <div class="row">
               <div class="col-md-4">
@@ -349,7 +360,7 @@
                 <th scope="col">CATEGORY</th>
                 <!-- <th scope="col">DESCRIPTION</!-->
 
-                <th scope="col">COMPANY</th>
+                <th scope="col" style="width:270px">COMPANY</th>
                 <th scope="col">PROJECT</th>
 
                 <th scope="col">SEVERITY</th>
@@ -362,12 +373,9 @@
                 <td
                   data-toggle="collapse"
                   data-target="#demo1"
-                  style="padding-left: 0px;"
+                  style="padding-left: 20px;"
                 >
-                  <i
-                    class="fa fa-caret-square-o-down"
-                    style="font-size:24px;    margin: 0px 15px 0px 10px;"
-                  ></i>
+                  <img src="../images/plus.svg" />
                 </td>
                 <td>
                   1
@@ -387,213 +395,71 @@
               </tr>
               <tr id="demo1" class="collapse">
                 <td colspan="9" style="padding: 10px;">
-                  <ol class="mitigation-list">
+                  <!-- <ul class="mitigation-list" style="padding:5px">
                     <li>
-                      <div class="row">
-                        <div class="col-md-3 col-lg-2">
-                          <div class="form-group">
-                            <label>Mitigation Plan</label>
-                            <input
-                              type="text"
-                              readonly
-                              class="form-control-plaintext "
-                              value="Work with NTPC"
-                            />
-                          </div>
-                        </div>
-                        <div class="col-md-2 col-lg-2">
-                          <div class="form-group">
-                            <label>Responsible</label>
-                            <input
-                              type="text"
-                              readonly
-                              class="form-control-plaintext "
-                              value="Ram"
-                            />
-                          </div>
-                        </div>
-                        <div class="col-md-2 col-lg-2">
-                          <div class="form-group">
-                            <label>Created By</label>
-                            <input
-                              type="text"
-                              readonly
-                              class="form-control-plaintext "
-                              value="arjun@gmail.com"
-                            />
-                          </div>
-                        </div>
-                        <div class="col-md-2 col-lg-2">
-                          <div class="form-group">
-                            <label>Status</label>
-                            <input
-                              type="text"
-                              readonly
-                              class="form-control-plaintext "
-                              value="Waiting For Approval"
-                            />
-                          </div>
-                        </div>
-
-                        <div class="col-md-2 col-lg-2">
-                          <div class="form-group">
-                            <label>Due/Completion Date</label>
-                            <input
-                              type="text"
-                              readonly
-                              class="form-control-plaintext "
-                              value="20-04-2020"
-                            />
-                          </div>
-                        </div>
-                        <div class="col-md-2 col-lg-2">
-                          <div class="form-group">
-                            <label style="display: flex;">Action</label>
-                            <a href="approve.html">
-                              <img src="../images/view.svg" />
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="row">
-                        <div class="col-md-2 col-lg-2">
-                          <div class="form-group">
-                            <!-- <label>Mitigation Activity</label> -->
-                            <input
-                              type="text"
-                              readonly
-                              class="form-control-plaintext "
-                              value="test-1"
-                            />
-                          </div>
-                        </div>
-                        <div class="col-md-2 col-lg-2">
-                          <div class="form-group">
-                            <!-- <label>Responsible</label> -->
-                            <input
-                              type="text"
-                              readonly
-                              class="form-control-plaintext "
-                              value="Rajesh"
-                            />
-                          </div>
-                        </div>
-                        <div class="col-md-2 col-lg-2">
-                          <div class="form-group">
-                            <!-- <label>Created By</label> -->
-                            <input
-                              type="text"
-                              readonly
-                              class="form-control-plaintext "
-                              value="suprith@gmail.com"
-                            />
-                          </div>
-                        </div>
-                        <div class="col-md-2 col-lg-2">
-                          <div class="form-group">
-                            <input
-                              type="text"
-                              readonly
-                              class="form-control-plaintext "
-                              value="Open"
-                            />
-                          </div>
-                        </div>
-                        <div class="col-md-3 col-lg-2">
-                          <div class="form-group">
-                            <!-- <label>Completion Date</label> -->
-                            <input
-                              type="text"
-                              readonly
-                              class="form-control-plaintext "
-                              value="20-04-2020"
-                            />
-                          </div>
-                        </div>
-                        <div class="col-md-2 col-lg-2">
-                          <div class="form-group">
-                            <!-- <a href="approve.html">
-                              <img src="../images/view.svg" />
-                            </a> -->
-                          </div>
-                        </div>
-                      </div>
+                      
+                      
                     </li>
 
-                    <li>
-                      <div class="row">
-                        <div class="col-md-2 col-lg-2">
-                          <div class="form-group">
-                            <!-- <label>Mitigation Activity</label> -->
-                            <input
-                              type="text"
-                              readonly
-                              class="form-control-plaintext "
-                              value="test-2"
-                            />
-                          </div>
-                        </div>
-                        <div class="col-md-2 col-lg-2">
-                          <div class="form-group">
-                            <!-- <label>Responsible</label> -->
-                            <input
-                              type="text"
-                              readonly
-                              class="form-control-plaintext "
-                              value="Rajesh"
-                            />
-                          </div>
-                        </div>
-                        <div class="col-md-2 col-lg-2">
-                          <div class="form-group">
-                            <!-- <label>Created By</label> -->
-                            <input
-                              type="text"
-                              readonly
-                              class="form-control-plaintext "
-                              value="suprith@gmail.com"
-                            />
-                          </div>
-                        </div>
-                        <div class="col-md-2 col-lg-2">
-                          <div class="form-group">
-                            <input
-                              type="text"
-                              readonly
-                              class="form-control-plaintext "
-                              value="Closed"
-                            />
-                          </div>
-                        </div>
-                        <div class="col-md-3 col-lg-2">
-                          <div class="form-group">
-                            <!-- <label>Completion Date</label> -->
-                            <input
-                              type="text"
-                              readonly
-                              class="form-control-plaintext "
-                              value="20-04-2020"
-                            />
-                          </div>
-                        </div>
-                        <div class="col-md-2 col-lg-2">
-                          <div class="form-group">
-                            <!-- <a href="approve.html">
-                              <img src="../images/view.svg" />
-                            </a> -->
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                  </ol>
+                   
+                  </ul> -->
+                  <table class="table table-style-1" style="padding-left:45px">
+                    <thead>
+                      <tr>
+                        
+                        <th>ID</th>
+                        <th scope="col">MITIGATION PLAN</th>
+                        <th scope="col">DEPARTMENT</th>
+                        
+        
+                        <th scope="col">RESPONSIBLE</th>
+                        <th scope="col">STATUS</th>
+        
+                        <th scope="col">DUE/COMPLETION DATE</th>
+                        <th scope="col">FORECAST DATE</th>
+                        
+                        <th scope="col">ACTION</th>
+                      </tr>
+                    </thead>
+                    <tbody class="mitigation-table">
+                      <tr >
+
+                        <td>
+                          1
+                        </td>
+                        <td>Work with NTPC/Govt Authorities</td>
+                        <td>Finance</td>
+                        <td>Ram</td>
+                        <td>Pending For Approval</td>
+        
+                        <td>20-04-2020</td>
+                        <td>20-04-2020</td>
+                        <td>      <a href="approve.html">
+                          <img src="../images/approve.svg" />
+                        </a></td>
+                      </tr>
+                      <tr >
+
+                        <td>
+                          2
+                        </td>
+                        <td>CPBG from module vendor</td>
+                        <td>Finance</td>
+                        <td>Raj</td>
+                        <td>Open</td>
+        
+                        <td>20-04-2020</td>
+                        <td>20-04-2020</td>
+                        <td>     </td>
+                      </tr>
+                      </tbody>
+                      </table>
                 </td>
               </tr>
               <tr>
                 <td></td>
                 <td>2</td>
-                <td></td>
+                <td>Module Price Fluctuation</td>
                 <td>Strategic</td>
                 <td>Ayana Ananthapurama Renewable Power Pvt Ltd</td>
                 <td>NTPC</td>
@@ -609,7 +475,7 @@
               <tr>
                 <td></td>
                 <td>3</td>
-                <td></td>
+                <td>Power evacuation readiness</td>
                 <td>Operational</td>
                 <td>Ayana Kadapa Renewable Power Pvt Ltd</td>
                 <td>SECI Kadapa</td>
@@ -664,3 +530,144 @@
     </script>
   </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="row">
+                        
+  <div class="col-md-3 col-lg-2">
+    <div class="form-group">
+      <label>Mitigation Plan</label>
+      <input
+        type="text"
+        readonly
+        class="form-control-plaintext "
+        value="1-Work with NTPC"
+      />
+    </div>
+  </div>
+  <div class="col-md-2 col-lg-2">
+    <div class="form-group">
+      <label>Responsible</label>
+      <input
+        type="text"
+        readonly
+        class="form-control-plaintext "
+        value="Ram"
+      />
+    </div>
+  </div>
+  <div class="col-md-2 col-lg-2">
+    <div class="form-group">
+      <label>Created By</label>
+      <input
+        type="text"
+        readonly
+        class="form-control-plaintext "
+        value="arjun@gmail.com"
+      />
+    </div>
+  </div>
+  <div class="col-md-2 col-lg-2">
+    <div class="form-group">
+      <label>Status</label>
+      <input
+        type="text"
+        readonly
+        class="form-control-plaintext "
+        value="Waiting For Approval"
+      />
+    </div>
+  </div>
+
+  <div class="col-md-2 col-lg-2">
+    <div class="form-group">
+      <label>Due/Completion Date</label>
+      <input
+        type="text"
+        readonly
+        class="form-control-plaintext "
+        value="20-04-2020"
+      />
+    </div>
+  </div>
+  <div class="col-md-2 col-lg-1">
+    <div class="form-group">
+      <label style="display: flex;">Action</label>
+      <a href="approve.html">
+        <img src="../images/view.svg" />
+      </a>
+    </div>
+  </div>
+</div>
+</li>
+<li>
+<div class="row">
+  <div class="col-md-2 col-lg-2">
+    <div class="form-group">
+      
+      <input
+        type="text"
+        readonly
+        class="form-control-plaintext "
+        value="2-CPBG from Module Vendor"
+      />
+    </div>
+  </div>
+  <div class="col-md-2 col-lg-2">
+    <div class="form-group">
+      
+      <input
+        type="text"
+        readonly
+        class="form-control-plaintext "
+        value="Rajesh"
+      />
+    </div>
+  </div>
+  <div class="col-md-2 col-lg-2">
+    <div class="form-group">
+      
+      <input
+        type="text"
+        readonly
+        class="form-control-plaintext "
+        value="suprith@gmail.com"
+      />
+    </div>
+  </div>
+  <div class="col-md-2 col-lg-2">
+    <div class="form-group">
+      <input
+        type="text"
+        readonly
+        class="form-control-plaintext "
+        value="Open"
+      />
+    </div>
+  </div>
+  <div class="col-md-3 col-lg-2">
+    <div class="form-group">
+      
+      <input
+        type="text"
+        readonly
+        class="form-control-plaintext "
+        value="20-04-2020"
+      />
+    </div>
+  </div>
+  <div class="col-md-2 col-lg-2">
+    <div class="form-group">
+
+    </div>
+  </div>
+</div> -->

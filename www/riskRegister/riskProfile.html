@@ -174,7 +174,7 @@
             <figure>
               <img src="../images/category.svg" />
             </figure>
-            <span>Risk Register</span>
+            <span>Risk Register.</span>
           </a>
         </li>
         <li>
@@ -185,6 +185,7 @@
             <span>Reports</span>
           </a>
         </li>
+
         <li>
           <a href="../index.html">
             <figure>
@@ -228,18 +229,18 @@
           <li class="breadcrumb-item">
             <a href="../home.html">Home</a>
           </li>
-          <li class="breadcrumb-item">
-            <a href="reports.html">Reports</a>
+          <li class="breadcrumb-item ">
+            Reports
           </li>
           <li class="breadcrumb-item active">
-            Risk Register Report
+            Risk Profile
           </li>
         </ol>
       </nav>
       <!-- Breadcrumb Section End -->
       <div class="row align-items-center no-gutters">
         <div class="col-md-8">
-          <h1 class="heading m-b-0">Risk Register Report</h1>
+          <h1 class="heading m-b-0">Risk Profile</h1>
         </div>
 
         <!-- style="width: 100%;    box-shadow: 0 0 2px rgba(0,0,0, .65);
@@ -248,256 +249,58 @@
         <div class="col-md-12 mt-3">
           <div class="box-card">
             <div class="row">
-              <div class="col-md-3">
-                <div class="form-group">
-                  <select class="login-input select-style-1">
-                    <option>Select Risk Category</option>
-                    <option>Permit & Approval</option>
-                    <option>Procurement</option>
-
-                    <option>Construction</option>
-                    <option>General</option>
-                  </select>
+              
+                <div class="col-md-3">
+                    <div class="form-group">
+                      <select class="login-input select-style-1">
+                        <option>Select Company</option>
+                        <option>Ayana Ananthapurama Pvt Ltd</option>
+                        <option>Ayana Renewable Power Pvt Ltd</option>
+    
+                        <option>Ayana Renewable Power One Pvt Ltd</option>
+                        <option>Ayana Renewable Power Two Pvt Ltd</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <select class="login-input select-style-1">
+                        <option>Select Project</option>
+                        <option>NTPC</option>
+                        <option>MRV</option>
+    
+                        <option>SECI Kadapa</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              <div class="row mt-3">
+                <div class="col-md-8">
+                  <button type="button" class="btn btn-danger">Apply</button>
+                  <button type="button" class="btn btn-light  ml-3">
+                    Clear
+                  </button>
+                  <button type="button" class="btn btn-light  ml-3">
+                    Download
+                  </button>
                 </div>
               </div>
-              <div class="col-md-3">
-                <div class="form-group">
-                  <select class="login-input select-style-1">
-                    <option>Select Company</option>
-                    <option>Ayana Ananthapurama Pvt Ltd</option>
-                    <option>Ayana Renewable Power Pvt Ltd</option>
-
-                    <option>Ayana Renewable Power One Pvt Ltd</option>
-                    <option>Ayana Renewable Power Two Pvt Ltd</option>
-                  </select>
-                </div>
-              </div>
-
-              <div class="col-md-3">
-                <div class="form-group">
-                  <select class="login-input select-style-1">
-                    <option>Select Project</option>
-                    <option>NTPC</option>
-                    <option>MRV</option>
-
-                    <option>SECI Kadapa</option>
-                  </select>
-                </div>
-              </div>
-
-              <div class="col-md-3">
-                <div class="form-group">
-                  <select class="login-input select-style-1">
-                    <option>Select Status</option>
-                    <option>Active</option>
-                    <option>Pending For Activation</option>
-
-                    <option>Suspended</option>
-                    <option>Terminated</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-3">
-                <div class="form-group">
-                  <select class="login-input select-style-1">
-                    <option>Select Department</option>
-                    <option>Finance</option>
-                    <option>IT</option>
-                  </select>
-                </div>
-              </div>
-
-              <div class="col-md-3">
-                <div class="form-group">
-                  <select class="login-input select-style-1">
-                    <option>Select Assignee</option>
-                    <option>Raj</option>
-                    <option>Ram</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="form-group">
-                  <select class="login-input select-style-1">
-                    <option>Custom Filter</option>
-                    <option>Select All</option>
-                    <option>Deviated</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-8">
-                <button type="button" class="btn btn-danger">Apply</button>
-                <button type="button" class="btn btn-light  ml-3">
-                  Clear
-                </button>
-                <button type="button" class="btn btn-light  ml-3">
-                  Download
-                </button>
-              </div>
-            </div>
           </div>
+        
+        <div class="box-card">
+            <div class="col-md-8">
+                <h1 class="heading m-b-0">Risk Distribution</h1>
+              </div>
+            <div class="row">
+            <div class="col-md-6"><img src="../images/matrix.png" style="height:240px;    margin: 35px 0px 0px 75px"/></div>
+            <div class="col-md-6">
+                <!-- <div class="row">
+                    <h1 class="heading m-b-0">Risk Distribution</h1>
+                  </div>  -->
+                <div class="row"> <div id="piechart"></div></div></div>
+            
         </div>
-        <div class="table-responsive">
-          <table class="table table-style-1">
-            <thead>
-              <tr>
-                <th>ID</th>
-                <th scope="col">RISK CATEGORY</th>
-                <th scope="col">DESCRIPTION</th>
-
-                
-                <th scope="col">PROBABILITY</th>
-                <th scope="col">IMPACT</th>
-                <th scope="col">SEVERITY</th>
-                <th scope="col">MITIGATION ID</th>
-                <th scope="col">MITIGATION Plan</th>
-                <th scope="col">Department</th>
-                <th scope="col">RESPONSIBLE</th>
-                <th scope="col">Due/COMPLETION DATE</th>
-                
-                <th scope="col">FORECAST DATE</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  1
-                </td>
-                <td>
-                  Permit Approval
-                </td>
-                <td>Tariff Adoption</td>
-                <td>
-                  Medium
-                </td>
-                <td>
-                  High
-                </td>
-                <td>
-                  High
-                </td>
-                <td>1</td>
-                <td>
-                  Work with NTPC
-                </td>
-                <td>Finance</td>
-                <td>Rajesh</td>
-                <td>
-                  20-04-2020
-                </td>
-                <td>
-                  20-04-2020
-                </td>
-                <!-- <td>
-                  --
-                </td> -->
-              </tr>
-              <td>
-                
-              </td>
-              <td>
-                
-              </td>
-              <td></td>
-              <td>
-                
-              </td>
-              <td>
-                
-              </td>
-              <td>
-                
-              </td>
-              <td>2</td>
-              <td>
-                CPBG From Module Vendor
-              </td>
-              <td>Finance</td>
-              <td>Kumar</td>
-              <td>
-                20-04-2020
-              </td>
-              <td>
-                20-04-2020
-              </td>
-              <!-- <td>
-                --
-              </td> -->
-            </tr>
-
-              <tr>
-                <td>
-                  2
-                </td>
-                <td>
-                  Procurement
-                </td>
-                <td>Price fluctuation</td>
-                <td>
-                  Medium
-                </td>
-                <td>
-                  High
-                </td>
-                <td>
-                  High
-                </td>
-                <td>3</td>
-                <td>
-                  CPBG for Vendor
-                </td>
-                <td>IT</td>
-                <td>Arjun</td>
-                <td>
-                  10-04-2020
-                </td>
-                <td>
-                  15-04-2020
-                </td>
-                <!-- <td>
-                  --
-                </td> -->
-              </tr>
-
-              <tr>
-                <td>
-                  3
-                </td>
-                <td>
-                  Construction
-                </td>
-                <td>Price fluctuation</td>
-                <td>
-                  Medium
-                </td>
-                <td>
-                  Low
-                </td>
-                <td>
-                  Low
-                </td>
-                <td>4</td>
-                <td>
-                  Close follow up
-                </td>
-                <td>Finance</td>
-                <td>Kumar</td>
-                <td>
-                  20-04-2020
-                </td>
-                <td>
-                  20-04-2020
-                </td>
-                <!-- <td>
-                  --
-                </td> -->
-              </tr>
-            </tbody>
-          </table>
+    </div>
         </div>
       </div>
       <!-- </div> -->
@@ -535,6 +338,33 @@
           autoclose: true
         });
       });
+    </script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <script type="text/javascript">
+    // Load google charts
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+    
+    // Draw the chart and set the chart values
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+      ['Task', 'Hours per Day'],
+      ['General', 8],
+      ['Permits & Approvals', 2],
+      ['Safety', 4],
+      ['Quality', 2],
+      ['Procurement', 8],
+      ['Construction', 8]
+    ]);
+    
+      // Optional; add a title and set the width and height of the chart
+      var options = {'title':'Risk Distribution',"titlePosition": 'none', 'width':555, 'height':300, 'legend': {'alignment':'center'},};
+    
+      // Display the chart inside the <div> element with id="piechart"
+      var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+      chart.draw(data, options);
+    }
     </script>
   </body>
 </html>

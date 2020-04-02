@@ -278,7 +278,7 @@ h4 {
 .box-card {
   border: 1px solid #69951a;
   background-color: #fff;
-  padding: 25px;
+  padding: 15px;
   margin-bottom: 25px;
   border-radius: 5px;
   box-shadow: 3px 4px 24px #e8edfc;
@@ -692,7 +692,7 @@ header .info-list li.username a:hover {
 
 /* Componets Page Start */
 .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 .form-group label {
   font-size: 12px;
@@ -949,6 +949,7 @@ textarea.form-control {
   border: none;
   font-weight: 600;
   padding-bottom: 0px;
+  text-transform: uppercase;
 }
 
 .table-style-1 > tbody > tr > td {
@@ -1575,7 +1576,11 @@ ul,
 }
 
 .mitigation-list {
-  overflow-y: auto;
+  /* overflow-y: auto;
   overflow-x: hidden;
-  max-height: 100px;
+  max-height: 100px; */
+}
+
+.mitigation-table td {
+  border:none !important;
 }
