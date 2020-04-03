@@ -197,6 +197,8 @@
       </ul>
     </section>
     <section class="main-section">
+      <h1 class="heading mb-3">Risk Register - Dashboard</h1>
+
       <div class="row">
         <div class="col-md-3">
           <!-- <div class="widget red-gradient"> -->
@@ -265,14 +267,14 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-md-3 col-lg-3"></div>
-        <div class="col-md-6 col-lg-6">
+        <!-- <div class="col-md-3 col-lg-3"></div> -->
+        <div class="col-md-12 col-lg-12">
           <div class="inner-box" style="min-height: 300px;">
             <h4>Risk By Project</h4>
             <div id="piechart3"></div>
           </div>
         </div>
-        <div class="col-md-3 col-lg-3"></div>
+        <!-- <div class="col-md-3 col-lg-3"></div> -->
       </div>
       <div class="row">
         <div class="col-md-12 col-lg-12">
@@ -330,7 +332,7 @@
       // Draw the chart and set the chart values
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ["Task", "Hours per Day"],
+          ["", ""],
           ["General", 8],
           ["Permits & Approvals", 2],
           ["Safety", 4],
@@ -343,8 +345,8 @@
         var options = {
           title: "Risk Distribution",
           titlePosition: "none",
-          width: 550,
-          height: 300,
+          // width: 550,
+          height: 400,
           legend: { alignment: "center" },
           backgroundColor: { fill: "#f7fafc" }
           //   chartArea: {
@@ -369,7 +371,7 @@
       // Draw the chart and set the chart values
       function drawCompanyChart() {
         var data = google.visualization.arrayToDataTable([
-          ["Task", "Hours per Day"],
+          ["", ""],
           ["Ayana Renewable Power Pvt Ltd", 8],
           ["Ayana Renewable Power One Pvt Ltd", 2],
           ["Ayana Renewable Power Two Pvt Ltd", 4],
@@ -381,14 +383,15 @@
         // Optional; add a title and set the width and height of the chart
         var options = {
           titlePosition: "none",
-          width: 550,
-          height: 300,
+          // width: 550,
+          height: 400,
           legend: { alignment: "center" },
-          backgroundColor: { fill: "#f7fafc" }
-          // chartArea: {
-          //   width: 450,
-          //   left: 100
-          // }
+          backgroundColor: { fill: "#f7fafc" },
+          chartArea: {
+            // width: 450,
+            left: 30,
+            right: 30
+          }
         };
 
         // Display the chart inside the <div> element with id="piechart"
@@ -401,12 +404,12 @@
     <script type="text/javascript">
       // Load google charts
       google.charts.load("current", { packages: ["corechart"] });
-      google.charts.setOnLoadCallback(drawCompanyChart);
+      google.charts.setOnLoadCallback(drawProjectChart);
 
       // Draw the chart and set the chart values
-      function drawCompanyChart() {
+      function drawProjectChart() {
         var data = google.visualization.arrayToDataTable([
-          ["Task", "Hours per Day"],
+          ["Projects", "Risk"],
           ["NTPC", 8],
           ["MRV", 2],
           ["ISTS", 4],
@@ -416,20 +419,26 @@
         // Optional; add a title and set the width and height of the chart
         var options = {
           titlePosition: "none",
-          width: 550,
-          height: 300,
-          legend: { alignment: "center" },
-          backgroundColor: { fill: "#f7fafc" }
-          //   chartArea: {
-          //     right: 130, // set this to adjust the legend width
-          //     left: 60 // set this eventually, to adjust the left margin
-          //   }
+          // width: 550,
+          height: 400,
+          legend: {
+            alignment: "center",
+            position: "bottom"
+          },
+          backgroundColor: { fill: "#f7fafc" },
+          chartArea: {
+            right: 130, // set this to adjust the legend width
+            left: 60 // set this eventually, to adjust the left margin
+          }
         };
 
         // Display the chart inside the <div> element with id="piechart"
         var chart = new google.visualization.PieChart(
           document.getElementById("piechart3")
         );
+        // chart.legend.position = "left";
+        // chart.legend.marginLeft = 0;
+        // chart.legend.marginRight = 0;
         chart.draw(data, options);
       }
     </script>
@@ -441,7 +450,7 @@
       // Draw the chart and set the chart values
       function drawDepartmentChart() {
         var data = google.visualization.arrayToDataTable([
-          ["", "", { role: "style" }],
+          ["", "Risk", { role: "style" }],
           ["Engineering", 5, "color:#5AA454"],
           ["BD", 2, "color:#A10A28"],
           ["IT", 4, "#color:C7B42C"],
@@ -456,10 +465,10 @@
         // Optional; add a title and set the width and height of the chart
         var options = {
           titlePosition: "none",
-          width: 1150,
+          // width: 1150,
           height: 400,
-          bar: { groupWidth: "95%" },
-          legend: { position: "bottom" },
+          // bar: { groupWidth: "95%" },
+          legend: { position: "none" },
           backgroundColor: { fill: "#f7fafc" },
           bar: {
             groupWidth: "80%"
@@ -469,11 +478,12 @@
           },
           vAxis: {
             title: "Risk"
-          },
-          chartArea: {
-            width: 1100,
-            left: 100
+            // ticks: [5, 10, 15, 20]
           }
+          // chartArea: {
+          //   width: 1100,
+          //   left: 100
+          // }
         };
 
         // Display the chart inside the <div> element with id="piechart"
@@ -482,6 +492,14 @@
         );
         chart.draw(data, options);
       }
+    </script>
+    <script>
+      $(window).resize(function() {
+        drawChart();
+        drawCompanyChart();
+        drawProjectChart();
+        drawDepartmentChart();
+      });
     </script>
   </body>
 </html>
